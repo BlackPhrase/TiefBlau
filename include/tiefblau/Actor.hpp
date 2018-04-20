@@ -28,8 +28,16 @@ public:
 	
 	/// @return current pose
 	const tString &GetPose() const {return msPose;}
+	
+	///
+	void SetPosition(const tVec3n &avPos){mvPos = avPos;}
+	
+	///
+	const tVec3n &GetPosition() const {return mvPos;}
 private:
 	tWString msName{L""}; ///< Display name (supports wide characters)
 	tString msImage{""}; ///< Current image
 	tString msPose{""}; ///< Current pose type
+	
+	tVec3n mvPos{0};
 };
